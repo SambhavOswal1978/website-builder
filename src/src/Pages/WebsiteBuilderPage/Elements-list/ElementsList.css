@@ -1,0 +1,13 @@
+.elements-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.element-item {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  cursor: grab;
+}

@@ -1,0 +1,19 @@
+.workspace {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.workspace-item {
+  position: absolute;
+  cursor: grab;
+  border: 1px dashed #999;
+  background-color: #f4f4f4;
+}
+
+.workspace-item.dragging {
+  cursor: grabbing;
+  opacity: 0.8;
+}
