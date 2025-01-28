@@ -29,7 +29,7 @@ const LoginModule = ({ onLogin }) => {
     <>
       <div className="logo-container">
         <img
-          src={require("../assets/logo-Face.jpeg")}
+          src={require("../assets/Logo_Example.jpg")}
           className="logoFace"
           alt="No Code Website Builder"
         />
@@ -41,7 +41,7 @@ const LoginModule = ({ onLogin }) => {
           className="background-img"
         />
         <div className="login-form">
-          <h1>Login</h1>
+          <h1 className="login-h1">Login</h1>
           <form onSubmit={handleSubmit}>
             <label>
               Username:
@@ -61,7 +61,7 @@ const LoginModule = ({ onLogin }) => {
                 required
               />
             </label>
-            <button type="submit">Login</button>
+            <button type="submit" className="login-button">Login</button>
           </form>
         </div>
       </div>

@@ -52,7 +52,7 @@ body {
   /* Ensure the form is above the blurred background */
 }
 
-h1 {
+.login-h1 {
   font-size: 2em;
   margin-bottom: 20px;
   font-weight: bold;
@@ -86,7 +86,7 @@ h1 {
   border: 2px solid #4caf50;
 }
 
-button {
+.login-button {
   width: 100%;
   padding: 12px;
   background-color: #4caf50;
@@ -98,20 +98,20 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.login-button:hover {
   background-color: #45a049;
   transform: scale3d(1.05, 1.05, 1.05);
   border: outset #45a049 4px;
 }
 
-button:active {
+.login-button:active {
   background-color: #388e3c;
   transform: scale(1);
 }
 
 .logoFace {
-  width: 100px;
-  height: 80px;
+  width: 200px;
+  height: 160px;
   margin-top: 10px;
   margin-left: 20px;
   position: fixed;

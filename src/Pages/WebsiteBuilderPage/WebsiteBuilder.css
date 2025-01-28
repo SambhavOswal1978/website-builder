@@ -1,37 +1,109 @@
-/* Main container for vertical layout */
-.website-builder-container {
-    display: grid;
-    grid-template-columns: 23.8% 50% 25%; /* Define height proportions */
-    height: 100vh; /* Full viewport height */
-    gap: 10px; /* Space between sections */
-    padding: 10px; /* Overall padding */
-    background-color: #f4f4f4; /* Optional background color */
-  }
+/* General Layout */
+.website-builder {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevent overflow */
+  position: relative;
   
-  /* Elements List Section */
-  .elements-list-section {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-  }
+}
+
+/* Elements List Section */
+.elements-list {
+  width: 13%; /* Fixed width for the elements list */
+  border-right: 2px solid #ccc;
+  background-color: #f8f9fa;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  padding: 10px;
+}
+
+/* Workspace Section */
+.workspace-container {
+  position: relative;
+  overflow: auto; /* Enables both horizontal and vertical scrolling */
+  width: 100%; /* Takes full width of the parent container */
+  height: 100%; /* Takes full height of the parent container */
+}
+
+.workspace {
+  position: relative;
+  min-width: 2000px; /* Adjust to desired workspace width */
+  height: 5000px; /* Or any dynamic height you already have */
+  background-color: #f9f9f9; /* Existing background */
+  border: 1px solid #ccc;
+}
+
+
+/* Properties Section */
+.properties-section {
+  width: 25%; /* Fixed width for the properties section */
+  padding: 10px;
+  background-color: #f0f0f0;
+  overflow-y: auto; /* Enable scrolling for long property lists */
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Container */
+.button-container {
+  display: flex; /* Horizontal layout */
+  justify-content: center; /* Center the buttons */
+  margin: 20px 0; /* Add spacing around the container */
   
-  /* Workspace Section */
-  .workspace-section {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-  }
-  
-  /* Properties Section */
-  .properties-section {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-  }
-  
+}
+
+/* Shared Button Styles */
+.save-btn,
+.preview-btn,
+.download-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px; /* Spacing between buttons */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.save-btn:hover,
+.preview-btn:hover,
+.download-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Workspace Elements */
+.workspace-item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ccc;
+  background-color: transparent;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Improved Save Button Alignment */
+/* .save-btn {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+.workspace-container {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.workspace {
+  position: relative;
+  width: 100%; /* Match the container width */
+  height: 5000px; /* Allow elements up to 5000px height */
+  background-color: #ffffff;
+}

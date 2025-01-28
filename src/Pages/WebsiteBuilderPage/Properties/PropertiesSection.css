@@ -1,13 +1,39 @@
 .properties-section {
-    padding: 20px;
-  }
-  
-  .properties-section h2 {
-    text-align: center;
-  }
-  
-  .properties-section p {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+.property-item {
+  margin-bottom: 10px;
+}
+
+.property-item label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.property-item select,
+.property-item input[type="text"] {
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.delete-btn:hover {
+  color: white;
+  background-color: #000000;
+  border: 2px outset #7a0000;
+}

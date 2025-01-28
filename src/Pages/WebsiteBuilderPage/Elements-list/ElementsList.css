@@ -1,27 +1,17 @@
 .elements-list {
-    padding: 20px;
-  }
-  
-  .elements-list h2 {
-    text-align: center;
-  }
-  
-  .elements-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .elements-list li {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #fff;
-  }
-  
-  .elements-list li:hover {
-    background-color: #e0e0e0;
-  }
-  
+  padding: 10px;
+  background-color: #fff;
+}
+
+.element-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: grab;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.element-item:hover {
+  background-color: #eaeaea;
+}

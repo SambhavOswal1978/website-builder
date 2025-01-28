@@ -1,0 +1,48 @@
+  .mainapp-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .mainapp-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .mainapp-btn:hover {
+    background-color: #0056b3;
+    border-top: outset #007bff 4px;
+    border-bottom: outset #0056b3 4px;
+    border-left: outset #007bff 4px;
+    border-right: outset #0056b3 4px;
+    transform: scale3d(1, 1, 1);
+  }
+  
+  .floating-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .option-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .option-btn:hover {
+    background-color: #218838;
+  }
+  
