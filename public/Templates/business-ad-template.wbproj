@@ -1,0 +1,29 @@
+{
+  "heading-1": {
+    "id": "heading-1",
+    "type": "Heading",
+    "text": "Grand Opening Sale!",
+    "position": { "top": 20, "left": 150 },
+    "fontSize": "32px",
+    "color": "#ff0000"
+  },
+  "textbox-1": {
+    "id": "textbox-1",
+    "type": "Textbox",
+    "text": "50% off on all products.",
+    "position": { "top": 100, "left": 150 },
+    "width": "300px",
+    "height": "50px",
+    "fontSize": "18px",
+    "color": "#000000",
+    "alignment": "center"
+  },
+  "image-1": {
+    "id": "image-1",
+    "type": "Image",
+    "src": "https://via.placeholder.com/300",
+    "position": { "top": 180, "left": 150 },
+    "width": "300px",
+    "height": "200px"
+  }
+}
