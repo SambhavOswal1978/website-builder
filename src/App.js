@@ -4,6 +4,7 @@ import LoginModule from "./Pages/LoginPage/LoginModule";
 import MainApp from "./Pages/HomePage/MainApp";
 import WebsiteBuilder from "./Pages/WebsiteBuilderPage/WebsiteBuilder";
 import TemplatesPage from "./Pages/Templates/TemplatesPage.js";
+import FeedbackButton from "./Pages/FeedbackButton"; // Import FeedbackButton
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,26 +22,27 @@ const App = () => {
 
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            isLoggedIn ? (
+      <div>
+        <Routes>
+          <Route
+            path="/"
+            element={isLoggedIn ? (
               <MainApp username={username} />
             ) : (
               <LoginModule onLogin={handleLogin} />
-            )
-          }
-        />
-        <Route
-          path="/websitebuilder"
-          element={<WebsiteBuilder templateData={selectedTemplate} />}
-        />
-        <Route
-          path="/templates"
-          element={<TemplatesPage onTemplateSelect={handleTemplateSelection} />}
-        />
-      </Routes>
+            )}
+          />
+          <Route
+            path="/websitebuilder"
+            element={<WebsiteBuilder templateData={selectedTemplate} />}
+          />
+          <Route
+            path="/templates"
+            element={<TemplatesPage onTemplateSelect={handleTemplateSelection} />}
+          />
+        </Routes>
+        <FeedbackButton /> {/* Add FeedbackButton */}
+      </div>
     </Router>
   );
 };
