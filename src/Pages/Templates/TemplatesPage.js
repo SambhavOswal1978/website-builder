@@ -46,7 +46,7 @@ const TemplatesPage = () => {
 
     try {
       // Fetch and parse the selected template file
-      const response = await fetch(`https://website-builder-pied.vercel.app/templates/${selectedTemplate}`);
+      const response = await fetch(`${process.env.PUBLIC_URL}/templates/${selectedTemplate}`);
       const templateText = await response.text();
       const templateData = JSON.parse(templateText);
 
