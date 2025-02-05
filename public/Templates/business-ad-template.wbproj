@@ -1,29 +1,57 @@
 {
+  "background-1": {
+    "id": "background-1",
+    "type": "Div",
+    "position": { "top": 0, "left": 0 },
+    "width": "1920px",
+    "height": "1080px",
+    "zIndex": "0",
+    "borderRadius":"0",
+    "margin":"0",
+    "border":"none",
+    "backgroundColor": "#dff9fb"
+  },
   "heading-1": {
     "id": "heading-1",
     "type": "Heading",
     "text": "Grand Opening Sale!",
-    "position": { "top": 20, "left": 150 },
-    "fontSize": "32px",
-    "color": "#ff0000"
+    "position": { "top": 50, "left": 50 },
+    "width": "800px",
+    "height": "80px",
+    "fontSize": "48px",
+    "color": "#000000",
+    "zIndex": "11",
+    "bold": true
   },
-  "textbox-1": {
-    "id": "textbox-1",
+  "text-1": {
+    "id": "text-1",
     "type": "Textbox",
-    "text": "50% off on all products.",
-    "position": { "top": 100, "left": 150 },
-    "width": "300px",
+    "text": "Up to 50% OFF on all products.",
+    "position": { "top": 150, "left": 50 },
+    "width": "600px",
+    "height": "50px",
+    "fontSize": "24px",
+    "color": "#000000",
+    "zIndex": "11"
+  },
+  "text-2": {
+    "id": "text-2",
+    "type": "Textbox",
+    "text": "Hurry up! Offer valid until the end of the month.",
+    "position": { "top": 210, "left": 50 },
+    "width": "600px",
     "height": "50px",
     "fontSize": "18px",
     "color": "#000000",
-    "alignment": "center"
+    "zIndex": "11"
   },
   "image-1": {
     "id": "image-1",
     "type": "Image",
-    "src": "https://via.placeholder.com/300",
-    "position": { "top": 180, "left": 150 },
+    "src": "https://via.placeholder.com/300x300",
+    "position": { "top": 300, "left": 50 },
     "width": "300px",
-    "height": "200px"
+    "height": "300px",
+    "zIndex": "11"
   }
 }

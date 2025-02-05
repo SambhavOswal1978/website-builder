@@ -1,1 +1,52 @@
-ECHO is on.
+{
+  "background-1": {
+    "id": "background-1",
+    "type": "Div",
+    "position": { "top": 0, "left": 0 },
+    "width": "1920px",
+    "height": "1080px",
+    "zIndex": "0",
+    "borderRadius":"0",
+    "margin":"0",
+    "border":"none",
+    "backgroundColor": "#f7d794"
+  },
+  "heading-1": {
+    "id": "heading-1",
+    "type": "Heading",
+    "text": "Welcome to My Blog",
+    "position": { "top": 50, "left": 50 },
+    "width": "800px",
+    "height": "80px",
+    "fontSize": "48px",
+    "color": "#000000",
+    "zIndex": "11",
+    "bold": true
+  },
+  "text-1": {
+    "id": "text-1",
+    "type": "Textbox",
+    "text": "Sharing my thoughts on tech and life.",
+    "position": { "top": 150, "left": 50 },
+    "width": "600px",
+    "height": "50px",
+    "fontSize": "24px",
+    "color": "#000000",
+    "zIndex": "11"
+  },
+  "list-1": {
+    "id": "list-1",
+    "type": "List",
+    "items": [
+      "Latest in Tech",
+      "Life Lessons",
+      "Travel Adventures"
+    ],
+    "position": { "top": 250, "left": 50 },
+    "width": "500px",
+    "height": "100px",
+    "fontSize": "18px",
+    "color": "#000000",
+    "zIndex": "11"
+  }
+}

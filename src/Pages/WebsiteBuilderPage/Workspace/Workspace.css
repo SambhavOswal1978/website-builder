@@ -1,10 +1,3 @@
-.workspace {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
 
 .workspace-item {
   position: absolute;
@@ -17,21 +10,16 @@
   cursor: grabbing;
   opacity: 0.8;
 }
-.workspace-container {
-  width: 100%;
-  height: 80vh; /* Adjust for responsiveness */
-  overflow: auto;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  position: relative;
-}
 
 .workspace {
-  width: 1920px; /* Example for larger width */
-  height: 1080px; /* Example for larger height */
+  min-width: 2000px; /* Extend the workspace width beyond the screen */
+  min-height: 5000px; /* Keep the large vertical workspace */
   position: relative;
-  background: white;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+
 }
+
 .workspace-container {
   position: relative;
   width: 80%; /* Adjust width as needed */
@@ -44,32 +32,6 @@
   max-width: 90vw; /* Prevent Workspace from exceeding the viewport width */
 }
 
-.workspace {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-}
-/* Adjust workspace-container and workspace styles */
-.workspace-container {
-  position: relative;
-  width: 80%; /* Adjust based on your design */
-  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-  margin: 20px auto 0; /* Top margin to move the workspace to the top */
-  border: 2px solid #ccc;
-  overflow: auto; /* Enable scrolling if elements overflow */
-  background-color: #f9f9f9;
-  max-height: 90vh; /* Prevent exceeding viewport height */
-  max-width: 90vw; /* Prevent exceeding viewport width */
-}
-
-/* Workspace-specific styles */
-.workspace {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-}
 
 /* Properties section fixed size */
 .floating-button {

@@ -23,12 +23,12 @@ const defaultElements = {
     text: "Visit Here",
     href: "#",
   },
-  marquee: {
-    type: "Marquee",
-    text: "Scrolling Text",
-    speed: "normal",
-    direction: "left",
-  },
+  // marquee: {
+  //   type: "Marquee",
+  //   text: "Scrolling Text",
+  //   speed: "normal",
+  //   direction: "left",
+  // },
   div: {
     type: "Div",
     backgroundColor: "#cccccc",

@@ -1,112 +1,128 @@
 {
+  "background-1": {
+    "id": "background-1",
+    "type": "Div",
+    "position": { "top": 0, "left": 0 },
+    "width": "1920px",
+    "height": "1080px",
+    "zIndex": "0",
+    "borderRadius":"0",
+    "margin":"0",
+    "border":"none",
+    "backgroundColor": "linear-gradient(to right, #2c3e50, #4ca1af)"
+  },
   "heading-1": {
     "id": "heading-1",
     "type": "Heading",
     "text": "Ada Smith",
-    "position": { "top": 20, "left": 20 },
-    "width": "500px",
-    "height": "40px",
+    "position": { "top": 50, "left": 20 },
+    "width": "400px",
+    "height": "50px",
     "fontSize": "32px",
-    "color": "#d35400",
-    "z-index":"10"
+    "color": "#000000",
+    "zIndex": "11",
+    "bold": true,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
-  "subheading-1": {
-    "id": "subheading-1",
+  "text-1": {
+    "id": "text-1",
     "type": "Textbox",
     "text": "Google Project Manager",
-    "position": { "top": 70, "left": 20 },
-    "width": "500px",
+    "position": { "top": 120, "left": 20 },
+    "width": "300px",
     "height": "30px",
     "fontSize": "18px",
-    "color": "#666666",
-    "z-index":"10"
+    "color": "#f1c40f",
+    "zIndex": "11",
+    "bold": false,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
-  "contact-info": {
-    "id": "contact-info",
+  "text-2": {
+    "id": "text-2",
     "type": "Textbox",
-    "text": "adaa_smth_612@gmail.com \u2022 (206) 444-8211 \u2022 4577 Engleside Road, Los Angeles, United States, CA 90012",
-    "position": { "top": 110, "left": 20 },
-    "width": "700px",
-    "height": "50px",
-    "fontSize": "14px",
-    "color": "#666666",
-    "z-index":"10"
-  },
-  "summary": {
-    "id": "summary",
-    "type": "Textbox",
-    "text": "Dynamic Project Manager with vast experience in vendor management, customer support, and customer experience optimization. Adept in providing helpful data analysis, troubleshooting, and cross-functional company support. A versatile team player with a passion for learning and growing within an organization.",
-    "position": { "top": 170, "left": 20 },
-    "width": "700px",
-    "height": "100px",
-    "fontSize": "14px",
+    "text": "ada.smith_612@gmail.com • (206) 444-8211",
+    "position": { "top": 160, "left": 20 },
+    "width": "500px",
+    "height": "30px",
+    "fontSize": "16px",
     "color": "#000000",
-    "z-index":"10"
+    "zIndex": "11",
+    "bold": false,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
+  },
+  "list-1": {
+    "id": "list-1",
+    "type": "List",
+    "items": [
+      "Brought forth a strong knowledge of user experience data.",
+      "Continually identified and delivered scalable solutions.",
+      "Served as an enthusiastic cross-functional partner."
+    ],
+    "position": { "top": 200, "left": 20 },
+    "width": "400px",
+    "height": "150px",
+    "color": "#000000",
+    "zIndex": "11",
+    "bold": false,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
   "heading-2": {
     "id": "heading-2",
     "type": "Heading",
     "text": "Career Experience",
-    "position": { "top": 290, "left": 20 },
-    "width": "700px",
-    "height": "30px",
+    "position": { "top": 400, "left": 20 },
+    "width": "600px",
+    "height": "40px",
     "fontSize": "24px",
-    "color": "#d35400",
-    "z-index":"10"
+    "color": "#f1c40f",
+    "zIndex": "11",
+    "bold": true,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
-  "career-experience": {
-    "id": "career-experience",
+  "text-3": {
+    "id": "text-3",
     "type": "Textbox",
-    "text": "Verizon Communications, Newbury Park\nProject Manager\n\u2022 Brought forth a strong knowledge of user experience data.\n\u2022 Continually identified and delivered scalable solutions.\n\u2022 Served as an enthusiastic cross-functional partner.\n\u2022 Worked with stakeholders to plan requirements.\n\u2022 Used technical judgment to drive project delivery.\n\u2022 Coordinated with stakeholders to manage and control project issues.\n\nPepsi Beverages Company, San Fernando\nAssistant Project Manager\n\u2022 Assisted in the management of technical vendors.\n\u2022 Lead quarterly business reviews.\n\u2022 Planned requirements with internal customers.\n\u2022 Managed project schedules and communicated risks to project stakeholders.\n\u2022 Coordinated with global delivery teams.\n\u2022 Developed reports to track schedule, budgets, risk, and overall project progress.",
-    "position": { "top": 340, "left": 20 },
-    "width": "700px",
-    "height": "300px",
-    "fontSize": "14px",
+    "text": "Bachelor of Arts - Seattle Central College, Seattle",
+    "position": { "top": 500, "left": 20 },
+    "width": "600px",
+    "height": "30px",
+    "fontSize": "16px",
     "color": "#000000",
-    "z-index":"10"
+    "zIndex": "11",
+    "bold": false,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
   "heading-3": {
     "id": "heading-3",
     "type": "Heading",
-    "text": "Education",
-    "position": { "top": 660, "left": 20 },
-    "width": "700px",
-    "height": "30px",
-    "fontSize": "24px",
-    "color": "#d35400",
-    "z-index":"10"
-  },
-  "education": {
-    "id": "education",
-    "type": "Textbox",
-    "text": "Bachelor of Arts\nSeattle Central College, Seattle, September 2010 \u2014 May 2014\n\nHigh School Diploma\nBallard High School, Ballard, September 2006 \u2014 June 2010",
-    "position": { "top": 710, "left": 20 },
-    "width": "700px",
-    "height": "120px",
-    "fontSize": "14px",
-    "color": "#000000",
-    "z-index":"10"
-  },
-  "heading-4": {
-    "id": "heading-4",
-    "type": "Heading",
     "text": "Technical Proficiencies",
-    "position": { "top": 850, "left": 20 },
-    "width": "700px",
-    "height": "30px",
+    "position": { "top": 550, "left": 20 },
+    "width": "600px",
+    "height": "40px",
     "fontSize": "24px",
-    "color": "#d35400",
-    "z-index":"10"
+    "color": "#f1c40f",
+    "zIndex": "11",
+    "bold": true,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   },
-  "technical-proficiencies": {
-    "id": "technical-proficiencies",
-    "type": "Textbox",
-    "text": "Adaptability\nEffective Time Management\nInterpersonal Skills",
-    "position": { "top": 900, "left": 20 },
-    "width": "700px",
-    "height": "100px",
-    "fontSize": "14px",
+  "list-2": {
+    "id": "list-2",
+    "type": "List",
+    "items": ["Adaptability", "Effective Time Management", "Interpersonal Skills"],
+    "position": { "top": 600, "left": 20 },
+    "width": "300px",
+    "height": "120px",
     "color": "#000000",
-    "z-index":"10"
+    "zIndex": "11",
+    "bold": false,
+    "italic": false,
+    "underline": { "enabled": false, "type": "solid" }
   }
 }

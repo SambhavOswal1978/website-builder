@@ -4,7 +4,7 @@ import LoginModule from "./Pages/LoginPage/LoginModule";
 import MainApp from "./Pages/HomePage/MainApp";
 import WebsiteBuilder from "./Pages/WebsiteBuilderPage/WebsiteBuilder";
 import TemplatesPage from "./Pages/Templates/TemplatesPage.js";
-import FeedbackButton from "./Pages/FeedbackButton"; // Import FeedbackButton
+
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      
         <Routes>
           <Route
             path="/"
@@ -41,8 +41,7 @@ const App = () => {
             element={<TemplatesPage onTemplateSelect={handleTemplateSelection} />}
           />
         </Routes>
-        <FeedbackButton /> {/* Add FeedbackButton */}
-      </div>
+       
     </Router>
   );
 };

@@ -12,7 +12,7 @@ const WebsiteBuilder = () => {
   const [workspaceElements, setWorkspaceElements] = useState({});
   const [selectedElementId, setSelectedElementId] = useState(null);
   const [workspaceHeight, setWorkspaceHeight] = useState(5000); // Dynamic height for workspace
-  
+
 
   // Load existing project or template if data is passed
   useEffect(() => {
@@ -27,15 +27,18 @@ const WebsiteBuilder = () => {
             width: element.width || "100px", // Default width
             height: element.height || "100px", // Default height
             opacity: element.opacity || "1", // Default opacity
-            zIndex: element.zIndex || "1", // Default z-index
+            zIndex: element.zIndex || "10", // Default z-index
+            bold: element.bold || false, // Default to false if missing
+          italic: element.italic || false, // Default to false if missing
+          underline: element.underline || { enabled: false, type: "solid" }, // Default underline property
           },
         ])
       );
       setWorkspaceElements(sanitizedElements);
     }
   }, [location.state]);
-  
-  
+
+
 
   // Adjust workspace height based on elements
   useEffect(() => {
@@ -122,64 +125,106 @@ const WebsiteBuilder = () => {
     const htmlContent = elementsList.map(element => {
       switch (element.type) {
         case "Textbox":
-        return `<div style="border: ${element.border};position:absolute;opacity:${element.opacity};z-index:${element.zIndex};background-color:${element.backgroundColor};top:${element.position.top}px;left:${element.position.left}px;width:${element.width};font-size:${element.fontSize};color:${element.color};text-align:${element.alignment}">${element.text}</div>`;
-      
-      case "Heading":
-        return `<div style="border: ${element.border};position:absolute;opacity:${element.opacity || "1"};z-index:${element.zIndex};background-color:${element.backgroundColor};top:${element.position.top}px;left:${element.position.left}px;width:${element.width};font-size:${element.fontSize};color:${element.color};text-align:${element.alignment}">${element.text}</div>`;
-      
-      case "Image":
-        return `<img src="${element.src}" style="border: ${element.border};position:absolute;z-index:${element.zIndex};opacity:${element.opacity || "1"};top:${element.position.top}px;left:${element.position.left}px;width:${element.width};height:${element.height}" alt="Image" />`;
-      
-      case "Audio":
-        return `<audio style="border: ${element.border};position:absolute;z-index:${element.zIndex};top:${element.position.top}px;opacity:${element.opacity || "1"};left:${element.position.left}px" ${element.controls ? 'controls' : ''} ${element.autoplay ? 'autoplay' : ''} ${element.loop ? 'loop' : ''} src="${element.src}"></audio>`;
-      
-      case "Video":
-        return `<video style="border: ${element.border};position:absolutez-index:${element.zIndex};top:${element.position.top}px;opacity:${element.opacity || "1"};left:${element.position.left}px;width:${element.width};height:${element.height}" ${element.controls ? 'controls' : ''} src="${element.src}"></video>`;
-      
-      case "Link":
-        return `<a href="${element.href}" style="border: ${element.border};z-index:${element.zIndex};background-color:${element.backgroundColor};opacity:${element.opacity || "1"};z-index:${element.zIndex};position:absolute;top:${element.position.top}px;left:${element.position.left}px;color:${element.color};text-decoration:${element.textDecoration};font-size:${element.fontSize};">${element.text}</a>`;
-      
-      case "Marquee":
-        return `<marquee style="border: ${element.border};z-index:${element.zIndex};background-color:${element.backgroundColor};position:absolute;opacity:${element.opacity || "1"};z-index:${element.zIndex};top:${element.position.top}px;left:${element.position.left}px;width:${element.width}" direction="${element.direction}" behavior="${element.behavior};;font-size:${element.fontSize};">${element.text}</marquee>`;
-      
-      case "Div":
-        return `<div style="border: ${element.border};position:absolute;top:${element.position.top}px;left:${element.position.left}px;opacity:${element.opacity || "1"};z-index:${element.zIndex};width:${element.width};height:${element.height};background-color:${element.backgroundColor};border:${element.border}"></div>`;
-      
+  return `<div style="
+    font-family:${element.fontFamily || "Arial, sans-serif"};
+    border: ${element.border || "none"};
+    position: absolute;
+    opacity: ${element.opacity || "1"};
+    z-index: ${element.zIndex || "1"};
+    background-color: ${element.backgroundColor || "transparent"};
+    top: ${element.position?.top || 0}px;
+    left: ${element.position?.left || 0}px;
+    width: ${element.width || "auto"};
+    font-size: ${element.fontSize || "16px"};
+    color: ${element.color || "#000"};
+    text-align: ${element.alignment || "left"};
+    font-weight: ${element.bold ? "bold" : "normal"};
+    font-style: ${element.italic ? "italic" : "normal"};
+    border-radius: ${element.borderRadius || "20px"};
+    padding: ${element.padding || "5px"};
+    text-decoration: ${
+      element.underline?.enabled
+        ? `${element.underline.type || "solid"} underline`
+        : "none"
+    };
+  ">${element.text || ""}</div>`;
+
+case "Heading":
+  return `<div style="
+    font-family:${element.fontFamily || "Arial, sans-serif"};
+    border: ${element.border || "none"};
+    position: absolute;
+    opacity: ${element.opacity || "1"};
+    z-index: ${element.zIndex || "1"};
+    background-color: ${element.backgroundColor || "transparent"};
+    top: ${element.position?.top || 0}px;
+    left: ${element.position?.left || 0}px;
+    width: ${element.width || "auto"};
+    height: ${element.height};
+    font-size: ${element.fontSize || "32px"};
+    color: ${element.color || "#000"};
+    text-align: ${element.alignment || "left"};
+    font-weight: ${element.bold ? "bold" : "normal"};
+    font-style: ${element.italic ? "italic" : "normal"};
+    border-radius: ${element.borderRadius || "20px"};
+    padding: ${element.padding || "5px"};
+    text-decoration: ${
+      element.underline?.enabled
+        ? `${element.underline.type || "solid"} underline`
+        : "none"
+    };
+  ">${element.text || ""}</div>`;
+
+        case "Image":
+          return `<img src="${element.src}" style="padding: ${element.padding || "5px"};border: ${element.border};border-radius: ${element.borderRadius || "20px"};position:absolute;z-index:${element.zIndex};opacity:${element.opacity || "1"};top:${element.position.top}px;left:${element.position.left}px;width:${element.width};height:${element.height}" alt="Image" />`;
+
+          case "Video":
+            return `<video 
+              src="${element.src}" 
+              ${element.controls ? "controls" : ""} 
+              ${element.autoplay ? "autoplay" : ""} 
+              ${element.loop ? "loop" : ""}
+              style="position:absolute;top:${element.position.top}px;left:${element.position.left}px;width:${element.width};height:${element.height};opacity:${element.opacity};z-index:${element.zIndex};border:${element.border};">
+            </video>`;
+          
+          case "Audio":
+            return `<audio 
+              src="${element.src}" 
+              ${element.controls ? "controls" : ""} 
+              ${element.autoplay ? "autoplay" : ""} 
+              ${element.loop ? "loop" : ""}
+              style="position:absolute;top:${element.position.top}px;left:${element.position.left}px;width:${element.width};opacity:${element.opacity};z-index:${element.zIndex};">
+            </audio>`;
+          
+        case "Link":
+          return `<a href="${element.href}" style="padding: ${element.padding || "5px"};font-family:${element.fontFamily};border-radius: ${element.borderRadius || "20px"};border: ${element.border};z-index:${element.zIndex};background-color:${element.backgroundColor};opacity:${element.opacity || "1"};z-index:${element.zIndex};position:absolute;top:${element.position.top}px;left:${element.position.left}px;color:${element.color};text-decoration:${element.textDecoration};font-size:${element.fontSize};font-weight: ${element.bold ? "bold" : "normal"};font-style: ${element.italic ? "italic" : "normal"};text-decoration: ${element.underline.enabled ? `${element.underline.type} underline` : "none"};">${element.text}</a>`;
+
+        // case "Marquee":
+        //   return `<marquee style="padding: ${element.padding || "5px"};"behaviour":${element.behavior || "slide"};"color":${element.color || "#000000"};border-radius: ${element.borderRadius || "20px"};font-family:${element.fontFamily};border: ${element.border};z-index:${element.zIndex};background-color:${element.backgroundColor};position:absolute;opacity:${element.opacity || "1"};z-index:${element.zIndex};top:${element.position.top}px;left:${element.position.left}px;width:${element.width}" direction="${element.direction}" behavior="${element.behavior};;font-size:${element.fontSize};font-weight: ${element.bold ? "bold" : "normal"};font-style: ${element.italic ? "italic" : "normal"};text-decoration: ${element.underline.enabled ? `${element.underline.type} underline` : "none"};">${element.text}</marquee>`;
+
+        case "Div":
+          return `<div style="padding: ${element.padding || "5px"};border-radius: ${element.borderRadius || "20px"};border: ${element.border};position:absolute;top:${element.position.top}px;left:${element.position.left}px;opacity:${element.opacity || "1"};z-index:${element.zIndex};width:${element.width};height:${element.height};background-color:${element.backgroundColor};border:${element.border}"></div>`;
+
         case "List": {
           const listItems = element.items
             .map(
               (item) =>
-                `<li style="margin:${element.margin || "5px"}; list-style-type: ${
-                  element.style || "disc"
+                `<li style="margin:${element.margin || "5px"}; list-style-type: ${element.style || "disc"
                 };">${item}</li>`
             )
             .join("");
-        
+
           // Map direction to valid CSS display property
           const displayStyle = element.direction === "horizontal" ? "flex" : "block";
           const gapStyle = element.direction === "horizontal" && element.gap
             ? `gap: ${element.gap}px;`
             : ""; // Add spacing if horizontal
-        
-          return `<${element.listType} style="
-            position: absolute;
-            top: ${element.position.top}px;
-            left: ${element.position.left}px;
-            z-index: ${element.zIndex};
-            opacity: ${element.opacity || "1"};
-            width: ${element.width};
-            color: ${element.color};
-            font-size: ${element.fontSize};
-            background-color: ${element.backgroundColor};
-            border: ${element.border};
-            display: ${displayStyle};
-            ${gapStyle}
-          ">${listItems}</${element.listType}>`;
+
+          return `<${element.listType} style="position: absolute;top: ${element.position.top}px;left: ${element.position.left}px;padding: ${element.padding || "5px"};z-index: ${element.zIndex};opacity: ${element.opacity || "1"};width: ${element.width};color: ${element.color};font-size: ${element.fontSize};background-color: ${element.backgroundColor};border-radius: ${element.borderRadius || "20px"};border: ${element.border};font-family:${element.fontFamily};font-weight: ${element.bold ? "bold" : "normal"};font-style: ${element.italic ? "italic" : "normal"};gap:${element.gap};text-decoration: ${element.underline.enabled ? `${element.underline.type} underline` : "none"};display: ${displayStyle};${gapStyle}">${listItems}</${element.listType}>`;
         }
-        
-      
+
         case "Dash":
-          return `<hr style="position:absolute;border: ${element.border};top:${element.position.top}px;left:${element.position.left}px;z-index:${element.zIndex};opacity:${element.opacity || "1"};width:${element.width};height:${element.height};background-color:${element.backgroundColor};border-style:${element.borderStyle};border-width:${element.borderWidth};border-color:${element.borderColor};margin:${element.margin};${element.noshade ? 'noshade' : ''}">`;
+          return `<hr style="border-radius: ${element.borderRadius || "20px"};position:absolute;border: ${element.border};top:${element.position.top}px;left:${element.position.left}px;z-index:${element.zIndex || "10"};opacity:${element.opacity || "1"};width:${element.width};height:${element.height};background-color:${element.backgroundColor};border-style:${element.borderStyle};border-width:${element.borderWidth};border-color:${element.borderColor};${element.noshade ? 'noshade' : ''}">`;
         default:
           return '';
       }
@@ -202,12 +247,12 @@ const WebsiteBuilder = () => {
 
   // Preview the project
   const handlePreviewProject = () => {
-  const htmlContent = generateHTML(workspaceElements);
-  const newTab = window.open();
-  newTab.document.open();
-  newTab.document.write(htmlContent);
-  newTab.document.close();
-};
+    const htmlContent = generateHTML(workspaceElements);
+    const newTab = window.open();
+    newTab.document.open();
+    newTab.document.write(htmlContent);
+    newTab.document.close();
+  };
 
 
   // Download the project as an HTML file
@@ -264,18 +309,42 @@ const WebsiteBuilder = () => {
 };
 
 const defaultElements = {
-  textbox: { type: "Textbox",zIndex:"10",opacity: "1", backgroundColor: "#000", text: "Sample Text", width: "100px", height: "50px", fontSize: "16px", color: "#000", alignment: "left" },
-  image: { type: "Image",zIndex:"10",opacity: "1", src: "https://via.placeholder.com/150", width: "150px", height: "150px" },
-  heading: { type: "Heading",zIndex:"10",opacity: "1",backgroundColor: "#fff", text: "Sample Heading", fontSize: "32px", color: "#000" },
-  button: { type: "Button",zIndex:"10",opacity: "1", text: "Click Me", width: "100px", height: "40px", backgroundColor: "#fff", color: "#fff" },
-  link: { type: "Link",zIndex:"10",opacity: "1",backgroundColor: "#fff", text: "Visit Here", href: "#", color: "#007bff" },
-  marquee: { type: "Marquee",zIndex:"10",opacity: "1",backgroundColor: "#fff", text: "Scrolling Text", width: "300px", height: "50px", speed: "1000", direction: "left" },
-  div: { type: "Div",opacity: "1",zIndex:"10", backgroundColor: "#ccc", width: "200px", height: "200px", border: "1px solid #000" },
- 
-  video: { type: "Video",opacity: "1",zIndex:"10", src: "https://sample-videos.com/video123/mp4/480/asdasdas.mp4", width: "320px", height: "240px", autoplay: false, controls: true, loop: false },
-  audio: { type: "Audio",opacity: "1", zIndex:"10",src: "https://sample-videos.com/audio/mp3/crowd-cheering.mp3", autoplay: false, controls: true, loop: false },
+  textbox: { type: "Textbox",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#000", text: "Sample Text", width: "100px", height: "50px", fontSize: "16px", color: "#000", alignment: "left" },
+  image: { type: "Image",padding :"5px",borderRadius:"20px", zIndex: "10", opacity: "1", src: "https://via.placeholder.com/150", width: "150px", height: "150px" },
+  heading: { type: "Heading",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#fff", text: "Sample Heading", fontSize: "32px", color: "#000" },
+  button: { type: "Button",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", text: "Click Me", width: "100px", height: "40px", backgroundColor: "#fff", color: "#fff" },
+  link: { type: "Link",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#fff", text: "Visit Here", href: "#", color: "#007bff" },
+  // marquee: { type: "Marquee",padding :"5px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#fff", text: "Scrolling Text", width: "300px", height: "50px", scrollamount: "100", direction: "left" ,color: "#000000", behavior:"slide" },
+  div: { type: "Div",padding :"5px",borderRadius:"20px", opacity: "1", zIndex: "10", backgroundColor: "#ccc", width: "200px", height: "200px", border: "1px solid #000" },
+
   
-  list: { type: "List",opacity: "1",zIndex:"10", items: ["Item 1", "Item 2", "Item 3"], style: "disc", alignment: "left" }, // New List Element
+    video: {
+      type: "Video",
+      src: "https://sample-videos.com/video123/mp4/480/asdasdas.mp4", // Default video
+      autoplay: false,
+      controls: true,
+      loop: false,
+      width: "320px",
+      height: "240px",
+      position: { top: 50, left: 50 }, // Default position
+      opacity: "1",
+      zIndex: "10",
+      border: "none",
+    },
+    audio: {
+      type: "Audio",
+      src: "https://sample-videos.com/audio/mp3/crowd-cheering.mp3", // Default audio
+      autoplay: false,
+      controls: true,
+      loop: false,
+      width: "300px",
+      position: { top: 50, left: 50 }, // Default position
+      opacity: "1",
+      zIndex: "10",
+    },
+  
+  
+  list: { type: "List",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, opacity: "1", zIndex: "10", items: ["Item 1", "Item 2", "Item 3"], style: "disc", alignment: "left" }, // New List Element
   dash: {
     type: "Dash",
     width: "100%",
@@ -287,8 +356,10 @@ const defaultElements = {
     margin: "10px 0",
     noshade: false,
     opacity: "1",
-    zIndex: "1"
+    zIndex: "1",
+    padding :"5px",
+    borderRadius:"20px",
   }
-  };
+};
 
 export default WebsiteBuilder;
