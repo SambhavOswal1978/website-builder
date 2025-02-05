@@ -5,8 +5,8 @@ import { Tabs } from '@mui/base/Tabs';
 import { TabsList as BaseTabsList } from '@mui/base/TabsList';
 import { styled } from '@mui/system';
 import * as React from 'react';
-import '../../../fonts.css';
-import { demoEleList } from './demoEle/demoEleList';
+import '../../../../../fonts.css';
+import { DemoEleList } from './demoEle/DemoEleList';
 
 
 export default function UnstyledTabsCustomized() {
@@ -19,7 +19,7 @@ export default function UnstyledTabsCustomized() {
         <Tab value={4}>Anchors</Tab>
         <Tab value={5}>Image</Tab>
       </TabsList>
-      <TabPanel value={1}>{demoEleList('buttons')}</TabPanel>
+      <TabPanel value={1}>{DemoEleList('buttons')}</TabPanel>
       <TabPanel value={2}>Second page</TabPanel>
       <TabPanel value={3}>Third page</TabPanel>
     </Tabs>

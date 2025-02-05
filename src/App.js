@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginModule from "./Pages/LoginPage/LoginModule";
+import { Route, BrowserRouter as Router, Routes } from "react-router";
 import MainApp from "./Pages/HomePage/MainApp";
-import WebsiteBuilder from "./Pages/WebsiteBuilderPage/WebsiteBuilder";
+import LoginModule from "./Pages/LoginPage/LoginModule";
 import TemplatesPage from "./Pages/Templates/TemplatesPage.js";
+import WebsiteBuilder from "./Pages/WebsiteBuilderPage/WebsiteBuilder";
 
 
 const App = () => {

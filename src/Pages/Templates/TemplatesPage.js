@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import "./TemplatesPage.css";
 
 const templates = [
@@ -46,7 +46,7 @@ const TemplatesPage = () => {
 
     try {
       // Fetch and parse the selected template file
-      const response = await fetch(`./Templates/${selectedTemplate}`);
+      const response = await fetch(`${process.env.PUBLIC_URL}/templates/${selectedTemplate}`);
       const templateText = await response.text();
       const templateData = JSON.parse(templateText);
 

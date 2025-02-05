@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { hero } from './Components/home/hero/hero';
+// import { hero } from '../../Components/home/hero/hero';
+import { homeNavbar } from './Components/home/navbar/navbar';
 import "./MainApp.css";
+// import { DemoEleList } from '../../Components/home/tab/demoEle/DemoEleList';
+import { DemoEleList } from './Components/home/tab/demoEle/DemoEleList';
+// import { DemoEleList } from './Components/home/tab/tab';
 
 const MainApp = () => {
   const navigate = useNavigate();
@@ -37,27 +43,34 @@ const MainApp = () => {
   };
 
   return (
-    <div className="mainapp-container">
-      <h1>Welcome to the Dashboard</h1>
-      <button className="mainapp-btn" onClick={handleGoToWebsiteBuilder}>
-        Go to Website Builder
-      </button>
+    // <div className="mainapp-container">
+    //   <h1>Welcome to the Dashboard</h1>
+    //   <button className="mainapp-btn" onClick={handleGoToWebsiteBuilder}>
+    //     Go to Website Builder
+    //   </button>
 
-      {showOptions && (
-        <div className="floating-options">
-          <button className="option-btn" onClick={handleNewProject}>
-            New Project
-          </button>
-          <button className="option-btn" onClick={handleOpenProject}>
-            Open Existing Project
-          </button>
-          <button className="option-btn" onClick={handleExploreTemplates}>
-            Explore Templates
-          </button>
-        </div>
-      )}
+    //   {showOptions && (
+    //     <div className="floating-options">
+    //       <button className="option-btn" onClick={handleNewProject}>
+    //         New Project
+    //       </button>
+    //       <button className="option-btn" onClick={handleOpenProject}>
+    //         Open Existing Project
+    //       </button>
+    //       <button className="option-btn" onClick={handleExploreTemplates}>
+    //         Explore Templates
+    //       </button>
+    //     </div>
+    //   )}
+    // </div>
+    <div style={{padding:'0 84px 36px 84px'}}>
+      {homeNavbar()}
+      {hero("Sambhav")}
+      {DemoEleList()}
+      <div style={{color:'rgba(36.57, 39.47, 62.69, 0.70)'}}>
+        &copy; Copyright <strong>NoCodeX</strong>, {new Date().getFullYear()} | Project by G49
+      </div>
     </div>
-    
   );
 };
 

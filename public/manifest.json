@@ -1,6 +1,6 @@
 {
-  "short_name": "WebBuilder",
-  "name": "Website Builder",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,6 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "description": "This app includes templates for website building. Templates are located in the public/templates directory."
+  "background_color": "#ffffff"
 }

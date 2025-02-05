@@ -1,6 +1,9 @@
-import '../../../fonts.css';
-import '../../../index.css';
-import '../../../variable.css';
+import '../../../../../fonts.css';
+import '../../../../../index.css';
+import '../../../../../variable.css';
+// import '../../../fonts.css';
+// import '../../../index.css';
+// import '../../../variable.css';
 
 export const homeNavbar = () => {
     return (
