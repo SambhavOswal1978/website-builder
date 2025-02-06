@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
+import AboutUs from "./Pages/HomePage/AboutUs.js";
 import MainApp from "./Pages/HomePage/MainApp";
 import LoginModule from "./Pages/LoginPage/LoginModule";
 import TemplatesPage from "./Pages/Templates/TemplatesPage.js";
@@ -39,6 +40,10 @@ const App = () => {
           <Route
             path="/templates"
             element={<TemplatesPage onTemplateSelect={handleTemplateSelection} />}
+          />
+          <Route
+            path="/about-us"
+            element={<AboutUs/>}
           />
         </Routes>
        

@@ -294,14 +294,14 @@ const PropertiesSection = ({ element, onPropertyChange, onDeleteElement }) => {
                 type="color"
                 id="backgroundColor"
                 name="backgroundColor"
-                value={element.backgroundColor || "#ffffff"}
+                value={element.backgroundColor || "#fff"}
                 onChange={handleInputChange}
               />
               <input
                 type="text"
                 id="backgroundColor"
                 name="backgroundColor"
-                value={element.backgroundColor || "#000000"}
+                value={element.backgroundColor || "#fff"}
                 onChange={handleInputChange}
               />
             </div>
@@ -1124,14 +1124,14 @@ const PropertiesSection = ({ element, onPropertyChange, onDeleteElement }) => {
                 type="color"
                 id="backgroundColor"
                 name="backgroundColor"
-                value={element.backgroundColor || "#ffffff"}
+                value={element.backgroundColor || "#fff"}
                 onChange={handleInputChange}
               />
               <input
                 type="text"
                 id="backgroundColor"
                 name="backgroundColor"
-                value={element.backgroundColor || "#000000"}
+                value={element.backgroundColor || "#fff"}
                 onChange={handleInputChange}
               />
             </div>

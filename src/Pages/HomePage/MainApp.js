@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { hero } from './Components/home/hero/hero';
 // import { hero } from '../../Components/home/hero/hero';
-import { homeNavbar } from './Components/home/navbar/navbar';
+import { HomeNavbar } from './Components/home/navbar/navbar';
 import "./MainApp.css";
 // import { DemoEleList } from '../../Components/home/tab/demoEle/DemoEleList';
 import { DemoEleList } from './Components/home/tab/demoEle/DemoEleList';
@@ -64,7 +64,7 @@ const MainApp = () => {
     //   )}
     // </div>
     <div style={{padding:'0 84px 36px 84px'}}>
-      {homeNavbar()}
+      {HomeNavbar()}
       {hero("Sambhav")}
       {DemoEleList()}
       <div style={{color:'rgba(36.57, 39.47, 62.69, 0.70)'}}>

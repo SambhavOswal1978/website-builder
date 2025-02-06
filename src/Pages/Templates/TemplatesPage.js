@@ -6,7 +6,7 @@ const templates = [
   {
     name: "Resume Template",
     description: "Professional resume layout",
-    file: "resume-template.wbproj",
+    file: "Resume.wbproj",
   },
   {
     name: "Business Ad",
