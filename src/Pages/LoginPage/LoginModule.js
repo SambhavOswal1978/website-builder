@@ -29,7 +29,7 @@ const LoginModule = ({ onLogin }) => {
     <>
       <div className="logo-container">
         <img
-          src={require("../assets/Logo_Example.jpg")}
+          src={require("../assets/Logo_without-waterMarks.png")}
           className="logoFace"
           alt="No Code Website Builder"
         />
