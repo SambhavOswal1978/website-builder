@@ -55,15 +55,14 @@ body {
 .login-h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  font-weight: bold;
   text-transform: uppercase;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 1px 4px rgba(0, 0, 0, 1);
+  color: #000000;
+  font-family: Poppins;
+  /* text-shadow: 2px 1px 4px rgba(0, 0, 0, 1); */
 }
 
 .login-form label {
-  display: block;
+  /* display: block; */
   margin-bottom: 10px;
   font-size: 14px;
   color: #000000;
@@ -73,9 +72,8 @@ body {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: 12px;
   border: solid rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
   font-size: 16px;
   color: #000000;
   outline: none;
@@ -83,29 +81,29 @@ body {
 }
 
 .login-form input:focus {
-  border: 2px solid #4caf50;
+  border: 2px solid var(--primary-color);
 }
 
 .login-button {
   width: 100%;
   padding: 12px;
-  background-color: #4caf50;
+  background-color: var(--primary-color);
   color: white;
   font-size: 16px;
   border: inset;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .login-button:hover {
-  background-color: #45a049;
+  background-color: var(--primary-hover-color);
   transform: scale3d(1.05, 1.05, 1.05);
-  border: outset #45a049 4px;
+  /* border: outset var(--primary-hover-color) 4px; */
 }
 
 .login-button:active {
-  background-color: #388e3c;
+  background-color: var(--primary-hover-color);
   transform: scale(1);
 }
 

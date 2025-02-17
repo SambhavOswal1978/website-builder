@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { hero } from './Components/home/hero/hero';
 // import { hero } from '../../Components/home/hero/hero';
@@ -11,7 +11,9 @@ import { DemoEleList } from './Components/home/tab/demoEle/DemoEleList';
 const MainApp = () => {
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
-
+  useEffect(() => {
+    document.title = 'Welcome to our Project';
+  }, []);
   const handleGoToWebsiteBuilder = () => {
     setShowOptions(!showOptions);
   };

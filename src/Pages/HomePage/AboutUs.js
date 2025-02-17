@@ -18,6 +18,9 @@ const AboutUs = () => {
           <strong>Purpose:</strong> To simplify the website creation process for
           non-developers and streamline the workflow for developers.
         </p>
+        <p>
+          <strong>Paper Link:</strong> <a href="https://example.com" target="_blank" rel="noopener noreferrer">Published Paper</a>
+        </p>
       </section>
 
       <section style={{ marginBottom: "20px" }}>
@@ -50,7 +53,7 @@ const AboutUs = () => {
           We value your feedback! Feel free to reach out to us via email:
         </p>
         <p>
-          <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a> : g49capstone@gmail.com
+          <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a>
         </p>
       </section>
     </div>

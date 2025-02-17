@@ -1,11 +1,12 @@
 .elements-list {
-  padding: 10px;
+  margin: 10px;
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .element-item {
-  margin: 10px 0;
-  padding: 10px;
+  margin: 10px;
   border: 1px solid #ccc;
   cursor: grab;
   background-color: #f9f9f9;

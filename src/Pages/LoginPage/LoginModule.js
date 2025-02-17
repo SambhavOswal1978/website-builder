@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie"; // Add js-cookie for cookie management
+import React, { useEffect, useState } from "react";
 import "./LoginModule.css";
 
 const LoginModule = ({ onLogin }) => {
@@ -29,7 +29,7 @@ const LoginModule = ({ onLogin }) => {
     <>
       <div className="logo-container">
         <img
-          src={require("../assets/Logo_without-waterMarks.png")}
+          src={"logo.png"}
           className="logoFace"
           alt="No Code Website Builder"
         />

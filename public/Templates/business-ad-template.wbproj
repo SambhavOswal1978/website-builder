@@ -48,7 +48,7 @@
   "image-1": {
     "id": "image-1",
     "type": "Image",
-    "src": "https://via.placeholder.com/300x300",
+    "src": "https://dummyimage.com/300x300/000/fff.png&text=Sale+Image",
     "position": { "top": 300, "left": 50 },
     "width": "300px",
     "height": "300px",

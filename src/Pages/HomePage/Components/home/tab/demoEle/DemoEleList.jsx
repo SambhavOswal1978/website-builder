@@ -39,7 +39,7 @@ export const DemoEleList = () => {
             <div style={{display:'flex', justifyContent:'space-between'}}>
                 <h1 style={{fontWeight:'normal', margin:0,}}>Elements</h1>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:20}}>
-                  {!showOptions && (<div className='button' onClick={handleGoToWebsiteBuilder} style={{height:'fit-content', alignItems:'center', backgroundColor: "var(--primary-color)", color:'white', padding:'8px 18px', borderRadius:10}}>Get Started</div>)}
+                  {!showOptions && (<div className='button' onClick={handleGoToWebsiteBuilder} style={{height:'fit-content', alignItems:'center', backgroundColor: "var(--primary-color)", color:'white', padding:'8px 18px', borderRadius:10, cursor:"pointer"}}>Get Started</div>)}
                   {showOptions && (
                     <div className="floating-options">
                       <button className="option-btn" onClick={handleNewProject}>
