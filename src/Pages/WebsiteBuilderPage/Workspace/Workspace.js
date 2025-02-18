@@ -277,6 +277,7 @@ const Workspace = ({ elements, onElementClick, onElementMove, onElementAdd }) =>
                   margin: element.margin || "10px",
                   fontFamily: element.fontFamily,
                   gap: element.gap,
+                  color: element.color || "#ffffff",
                   backgroundColor: element.backgroundColor || "#ffffff",
                   display: element.direction === "horizontal" ? "flex" : "block", // Flex for horizontal, block for vertical
                   border: element.border || "1px solid #fff",

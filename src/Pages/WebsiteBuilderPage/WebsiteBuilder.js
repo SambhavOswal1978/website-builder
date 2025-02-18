@@ -344,7 +344,7 @@ const defaultElements = {
     },
   
   
-  list: { type: "List",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, opacity: "1", zIndex: "10", items: ["Item 1", "Item 2", "Item 3"], style: "disc", alignment: "left" }, // New List Element
+  list: { type: "List",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" },color: "#ffffff", opacity: "1", zIndex: "10", items: ["Item 1", "Item 2", "Item 3"], style: "disc", alignment: "left" }, // New List Element
   dash: {
     type: "Dash",
     width: "100%",

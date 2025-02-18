@@ -1119,6 +1119,16 @@ const PropertiesSection = ({ element, onPropertyChange, onDeleteElement }) => {
               />
             </div>
             <div className="property-group">
+              <label htmlFor="color">Text Color:</label>
+              <input
+                type="color"
+                id="color"
+                name="color"
+                value={element.color || "#000000"}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="property-group">
               <label htmlFor="backgroundColor">Background Color:</label>
               <input
                 type="color"
