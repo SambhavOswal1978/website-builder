@@ -284,7 +284,7 @@ const Workspace = ({ elements, onElementClick, onElementMove, onElementAdd }) =>
                   padding: element.padding || "5px",
                   fontStyle: element.italic ? "italic" : "normal",
                   borderRadius: element.borderRadius || "20",
-                  alignContent: "flex-start";
+                  //alignContent: "flex-start";
                   textDecoration: element.underline.enabled
                     ? `${element.underline.type} underline`
                     : "none",
