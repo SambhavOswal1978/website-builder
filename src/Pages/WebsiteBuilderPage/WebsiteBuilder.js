@@ -334,7 +334,7 @@ const defaultElements = {
     audio: {
       type: "Audio",
       src: "https://sample-videos.com/audio/mp3/crowd-cheering.mp3", // Default audio
-      autoplay: false,
+      autoplay: true,
       controls: true,
       loop: false,
       width: "300px",
