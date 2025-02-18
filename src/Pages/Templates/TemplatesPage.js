@@ -25,7 +25,7 @@ const templates = [
     name: "Event",
     description: "Event announcement layout",
     file: "event-template.wbproj",
-    image: "/Templates/Event-cover.png",
+    image: "/Templates/Resume-cover.png",
   },
   {
     name: "Blog",
