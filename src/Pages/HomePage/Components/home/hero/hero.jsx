@@ -1,4 +1,7 @@
+import Cookies from "js-cookie"; // Add js-cookie for cookie management
+
 export const hero = ({username}) => {
+    const savedUsername = Cookies.get("username");
     return (
         <div style={{display:'flex', alignItems:'center', paddingTop:28}}>
             <div>
