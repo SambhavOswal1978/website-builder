@@ -5,6 +5,7 @@ import ElementsList from "./Elements-list/ElementsList";
 import PropertiesSection from "./Properties/PropertiesSection";
 import "./WebsiteBuilder.css";
 import Workspace from "./Workspace/Workspace";
+import Cookies from "js-cookie"; // Add js-cookie for cookie management
 
 const WebsiteBuilder = () => {
   const location = useLocation();
@@ -12,7 +13,8 @@ const WebsiteBuilder = () => {
   const [workspaceElements, setWorkspaceElements] = useState({});
   const [selectedElementId, setSelectedElementId] = useState(null);
   const [workspaceHeight, setWorkspaceHeight] = useState(5000); // Dynamic height for workspace
-
+  const date=new Date();
+  const time=date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
 
   // Load existing project or template if data is passed
   useEffect(() => {
@@ -231,6 +233,7 @@ case "Heading":
     }).join('\n');
 
     return `
+    <!-- This is made by User: ${savedUsername}  on the Time Stamp of ${time}--!>
       <!DOCTYPE html>
       <html>
         <head>
