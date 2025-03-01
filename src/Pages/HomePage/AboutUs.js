@@ -43,7 +43,7 @@ const AboutUs = () => {
           <li><strong>Name:</strong> Yash Jain </li>
           <li><strong>Name:</strong> Samiksha Pakhare </li>
           <li><strong>Name:</strong> Sambhav Oswal </li>
-          <li><strong>Name:</strong> Prithavi Sutar </li>
+          <li><strong>Name:</strong> Prithvi Sutar </li>
         </ul>
       </section>
 
