@@ -1,5 +1,4 @@
 import Cookies from "js-cookie"; // Add js-cookie for cookie management
-
 export const hero = ({username}) => {
     const savedUsername = Cookies.get("username");
     return (
