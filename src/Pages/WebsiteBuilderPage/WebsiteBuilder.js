@@ -13,8 +13,10 @@ const WebsiteBuilder = () => {
   const [workspaceElements, setWorkspaceElements] = useState({});
   const [selectedElementId, setSelectedElementId] = useState(null);
   const [workspaceHeight, setWorkspaceHeight] = useState(5000); // Dynamic height for workspace
+  const savedUsername = Cookies.get("username");
   const date=new Date();
   const time=date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  console.log(time);
 
   // Load existing project or template if data is passed
   useEffect(() => {
@@ -233,7 +235,7 @@ case "Heading":
     }).join('\n');
 
     return `
-    <!-- This is made by User: ${savedUsername}  on the Time Stamp of ${time}--!>
+      <!-- This is made by User: ${savedUsername}  on the Time Stamp of ${time}--!>
       <!DOCTYPE html>
       <html>
         <head>
