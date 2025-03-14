@@ -12,7 +12,7 @@ const MainApp = () => {
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
   useEffect(() => {
-    document.title = 'Welcome to our Project | Wizzy.dnd';
+    document.title = 'Wizzy.dnd';
   }, []);
   const handleGoToWebsiteBuilder = () => {
     setShowOptions(!showOptions);
