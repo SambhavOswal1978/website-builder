@@ -11,10 +11,10 @@ export const HomeNavbar = () => {
   const navigate = useNavigate();
 
     return (
-        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', fontFamily:'Poppins', padding:'16px 0'}}>
-            {/* <a href='/' style={{display:'flex', alignItems:'center', textDecoration:'none'}}> */}
+        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', fontFamily:'Poppins', padding:'16px 0 0 0'}}>
+            <a href='/' style={{display:'flex', alignItems:'center', textDecoration:'none'}}>
                 <img className="LogoFace" src="/Icons/Logo_without-waterMarks.png" height={104} style={{mixBlendMode: "multiply"}}/>
-            {/* </a> */}
+            </a>
             <div style={{fontSize:14, fontWeight:'bold', display:'flex', alignItems:'center', gap:20}}>
                 <div onClick={() => {navigate('/about-us')}} className='button' style={{color:'rgba(27,43,101,0.65)', cursor:'pointer'}}>
                     About us!

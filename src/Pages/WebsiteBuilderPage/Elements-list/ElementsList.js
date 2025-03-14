@@ -25,7 +25,7 @@ const defaultElements = {
     type: "Link",
     text: "Visit Here",
     href: "#",
-    url : '/Icons/builder/list.svg',
+    url : '/Icons/builder/link.svg',
   },
   // marquee: {
   //   type: "Marquee",

@@ -17,6 +17,10 @@ const LoginModule = ({ onLogin }) => {
     }
   }, []);
 
+  useEffect(() => {
+    document.title = 'Login | Wizzy.dnd';
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Save username in cookies with a 1-month expiration

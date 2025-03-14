@@ -12,7 +12,7 @@ const MainApp = () => {
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
   useEffect(() => {
-    document.title = 'Welcome to our Project';
+    document.title = 'Welcome to our Project | Wizzy.dnd';
   }, []);
   const handleGoToWebsiteBuilder = () => {
     setShowOptions(!showOptions);
@@ -70,7 +70,7 @@ const MainApp = () => {
       {hero("Sambhav")}
       {DemoEleList()}
       <div style={{color:'rgba(36.57, 39.47, 62.69, 0.70)'}}>
-        &copy; Copyright <strong>NoCodeX</strong>, {new Date().getFullYear()} | Project by G49
+        &copy; Copyright <strong>Wizzy.dnd</strong>, {new Date().getFullYear()} | Project by G49
       </div>
     </div>
   );

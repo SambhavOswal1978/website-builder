@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { DemoEle } from "./DemoEle";
 import './demoEle.css';
@@ -78,11 +78,11 @@ export const DemoEleList = () => {
                 {DemoEle("Image", "Add images to your webpage to make it more attractive", "/Icons/home/image-icon.svg")}
                 {DemoEle("Heading", "Heading is used to for main points", "/Icons/home/heading.svg")}
                 {DemoEle("Text Editor", "Gives you the flexibility to change the text content through rich editor", "/Icons/home/para.svg")}
-                {DemoEle("List", "Used for a clickable action", "/Icons/home/button.svg")}
+                {DemoEle("List", "Used to display a list of elements", "/Icons/home/list.svg")}
                 {DemoEle("Video", "Used to display video", "/Icons/home/video.svg")}
-                {DemoEle("Audio", "Used to display video hosted on youtube", "/Icons/home/youtube.svg")}
-                {DemoEle("Link", "Add social icons to your website", "/Icons/home/social.svg")}
-                {DemoEle("Block", "Add google maps and show your location to customers on website", "/Icons/home/maps.svg")}
+                {DemoEle("Audio", "Used to add audio functionality on your webpage.", "/Icons/home/audio.svg")}
+                {DemoEle("Link", "Hyperlink for easy navigation between webpages", "/Icons/home/link.svg")}
+                {DemoEle("Div", "Provides container and plain background for elements", "/Icons/home/block.svg")}
             </div>
         </div>
     );
