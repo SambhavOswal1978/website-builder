@@ -9,18 +9,18 @@ const templates = [
     file: "Resume.wbproj",
     image: "/Templates/Resume-cover.png",
   },
-  {
-    name: "Business Ad",
-    description: "Business advertisement layout",
-    file: "business-ad-template.wbproj",
-    image: "/Templates/business-ad-cover.png",
-  },
-  {
-    name: "Portfolio",
-    description: "Creative portfolio design",
-    file: "portfolio-template.wbproj",
-    image: "/Templates/portfolio-cover.png",
-  },
+  // {
+  //   name: "Business Ad",
+  //   description: "Business advertisement layout",
+  //   file: "business-ad-template.wbproj",
+  //   image: "/Templates/business-ad-cover.png",
+  // },
+  // {
+  //   name: "Portfolio",
+  //   description: "Creative portfolio design",
+  //   file: "portfolio-template.wbproj",
+  //   image: "/Templates/portfolio-cover.png",
+  // },
   {
     name: "Event",
     description: "Event announcement layout",
