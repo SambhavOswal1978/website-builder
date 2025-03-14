@@ -18,7 +18,7 @@ const LoginModule = ({ onLogin }) => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Login | Wizzy.dnd';
+    document.title = 'Wizzy.dnd';
   }, []);
 
   const handleSubmit = (e) => {

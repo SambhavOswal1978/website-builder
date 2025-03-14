@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
 import AboutUs from "./Pages/HomePage/AboutUs.js";
 import MainApp from "./Pages/HomePage/MainApp";
@@ -16,6 +16,10 @@ const App = () => {
     setIsLoggedIn(true);
     setUsername(username);
   };
+
+  useEffect(() => {
+    document.title = 'Wizzy.dnd';
+  }, []);
 
   const handleTemplateSelection = (templateData) => {
     setSelectedTemplate(templateData);

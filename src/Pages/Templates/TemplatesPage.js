@@ -38,9 +38,6 @@ const templates = [
 const TemplatesPage = () => {
   const navigate = useNavigate();
   const [selectedTemplate, setSelectedTemplate] = useState(null);
-  useEffect(() => {
-    document.title = 'Select Templates';
-  }, []);
   const handleSelectTemplate = (templateFile) => {
     setSelectedTemplate(templateFile);
   };
