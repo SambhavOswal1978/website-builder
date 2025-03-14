@@ -12,16 +12,16 @@ export const HomeNavbar = () => {
 
     return (
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', fontFamily:'Poppins', padding:'16px 0'}}>
-            <a href='/' style={{display:'flex', alignItems:'center', textDecoration:'none'}}>
-                <img src="logo.svg" height={56} />
-            </a>
+            {/* <a href='/' style={{display:'flex', alignItems:'center', textDecoration:'none'}}> */}
+                <img className="LogoFace" src="/Icons/Logo_without-waterMarks.png" height={104} style={{mixBlendMode: "multiply"}}/>
+            {/* </a> */}
             <div style={{fontSize:14, fontWeight:'bold', display:'flex', alignItems:'center', gap:20}}>
                 <div onClick={() => {navigate('/about-us')}} className='button' style={{color:'rgba(27,43,101,0.65)', cursor:'pointer'}}>
                     About us!
                 </div>
-                <div className='button loginBtn' style={{backgroundColor: "var(--primary-color)", color:'white', padding:'8px 18px', borderRadius:10}}>
+                {/* <div className='button loginBtn' style={{backgroundColor: "var(--primary-color)", color:'white', padding:'8px 18px', borderRadius:10}}>
                     Login/Register
-                </div>
+                </div> */}
             </div>
         </div>
     );
