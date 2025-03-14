@@ -9,7 +9,7 @@ const defaultElements = {
   },
   image: {
     type: "Image",
-    src: "https://placehold.co/150",
+    src: "https://via.placeholder.com/100",
     url : '/Icons/builder/image.svg',
   },
   heading: {

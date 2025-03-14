@@ -5,7 +5,6 @@ import ElementsList from "./Elements-list/ElementsList";
 import PropertiesSection from "./Properties/PropertiesSection";
 import "./WebsiteBuilder.css";
 import Workspace from "./Workspace/Workspace";
-import Cookies from "js-cookie"; // Add js-cookie for cookie management
 
 const WebsiteBuilder = () => {
   const location = useLocation();
@@ -13,10 +12,7 @@ const WebsiteBuilder = () => {
   const [workspaceElements, setWorkspaceElements] = useState({});
   const [selectedElementId, setSelectedElementId] = useState(null);
   const [workspaceHeight, setWorkspaceHeight] = useState(5000); // Dynamic height for workspace
-  const savedUsername = Cookies.get("username");
-  const date=new Date();
-  const time=date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-  console.log(time);
+
 
   // Load existing project or template if data is passed
   useEffect(() => {
@@ -235,7 +231,6 @@ case "Heading":
     }).join('\n');
 
     return `
-      <!-- This is made by User: ${savedUsername}  on the Time Stamp of ${time}--!>
       <!DOCTYPE html>
       <html>
         <head>
@@ -315,7 +310,7 @@ case "Heading":
 
 const defaultElements = {
   textbox: { type: "Textbox",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#ffffff", text: "Sample Text", width: "100px", height: "50px", fontSize: "16px", color: "#000", alignment: "left" },
-  image: { type: "Image",padding :"5px",borderRadius:"20px", zIndex: "10", opacity: "1", src: "https://placehold.co/500", width: "150px", height: "150px" },
+  image: { type: "Image",padding :"5px",borderRadius:"20px", zIndex: "10", opacity: "1", src: "https://via.placeholder.com/150", width: "150px", height: "150px" },
   heading: { type: "Heading",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#ffffff", text: "Sample Heading", fontSize: "32px", color: "#000" },
   button: { type: "Button",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", text: "Click Me", width: "100px", height: "40px", backgroundColor: "#fff", color: "#fff" },
   link: { type: "Link",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#fff", text: "Visit Here", href: "#", color: "#007bff" },
