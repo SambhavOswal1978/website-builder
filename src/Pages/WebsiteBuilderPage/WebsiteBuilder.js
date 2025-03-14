@@ -5,6 +5,7 @@ import ElementsList from "./Elements-list/ElementsList";
 import PropertiesSection from "./Properties/PropertiesSection";
 import "./WebsiteBuilder.css";
 import Workspace from "./Workspace/Workspace";
+import Cookies from "js-cookie";
 
 const WebsiteBuilder = () => {
   const location = useLocation();
@@ -12,6 +13,10 @@ const WebsiteBuilder = () => {
   const [workspaceElements, setWorkspaceElements] = useState({});
   const [selectedElementId, setSelectedElementId] = useState(null);
   const [workspaceHeight, setWorkspaceHeight] = useState(5000); // Dynamic height for workspace
+  const savedUsername = Cookies.get("username");
+  const date=new Date();
+  const time=date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  const dateTime = date.getDate() + "/"+ (date.getMonth()+1)  + "/" + date.getFullYear() + " " + time;
 
 
   // Load existing project or template if data is passed
@@ -231,6 +236,7 @@ case "Heading":
     }).join('\n');
 
     return `
+      <!---This page is created by ${savedUsername} using No-Code-website-builder named as Wizzy.dnd at the time of ${dateTime}--->
       <!DOCTYPE html>
       <html>
         <head>
