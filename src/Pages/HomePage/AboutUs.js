@@ -53,7 +53,7 @@ const AboutUs = () => {
           We value your feedback! Feel free to reach out to us via email:
         </p>
         <p>
-          <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a>
+          <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a>: g49capstone@gmail.com
         </p>
       </section>
     </div>
