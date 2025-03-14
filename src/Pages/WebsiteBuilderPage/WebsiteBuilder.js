@@ -315,7 +315,7 @@ case "Heading":
 
 const defaultElements = {
   textbox: { type: "Textbox",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#ffffff", text: "Sample Text", width: "100px", height: "50px", fontSize: "16px", color: "#000", alignment: "left" },
-  image: { type: "Image",padding :"5px",borderRadius:"20px", zIndex: "10", opacity: "1", src: "https://via.placeholder.com/150", width: "150px", height: "150px" },
+  image: { type: "Image",padding :"5px",borderRadius:"20px", zIndex: "10", opacity: "1", src: "https://placehold.co/500", width: "150px", height: "150px" },
   heading: { type: "Heading",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#ffffff", text: "Sample Heading", fontSize: "32px", color: "#000" },
   button: { type: "Button",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", text: "Click Me", width: "100px", height: "40px", backgroundColor: "#fff", color: "#fff" },
   link: { type: "Link",padding :"5px",borderRadius:"20px", bold: false, italic: false, underline: { enabled: false, type: "solid" }, zIndex: "10", opacity: "1", backgroundColor: "#fff", text: "Visit Here", href: "#", color: "#007bff" },
