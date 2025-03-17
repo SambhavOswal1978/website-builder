@@ -19,7 +19,7 @@ const AboutUs = () => {
           non-developers and streamline the workflow for developers.
         </p>
         <p>
-          <strong>Paper Link:</strong> <a href="https://example.com" target="_blank" rel="noopener noreferrer">Published Paper</a>
+          <strong>Paper Link:</strong> <a href="https://www.irjmets.com/paperdetail.php?paperId=c3c71029304bcffd12af815e664738b8&title=NO+CODE+WEBSITE+BUILDER+&authpr=Prithviraj+Chandrakant+Sutar" target="_blank" rel="noopener noreferrer">Published Paper</a>
         </p>
       </section>
 
