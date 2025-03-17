@@ -7,8 +7,8 @@ export const hero = ({username}) => {
         <div style={{display:'flex', alignItems:'center', paddingTop:28}}>
             <div>
                 <h1>Hi, {savedUsername}</h1>
-                <h3 style={{color:'var(--secondary-color)'}}>Welcome to no code website builder</h3>
-                <p style={{width: 'calc(60%)', fontWeight:'300'}}>Lebih dari 500+ contoh komponen yang dirancang secara profesional, sepenuhnya responsif, dan dibuat dengan ahli yang dapat Anda masukkan ke dalam proyek Tailwind, Bootstrap, dan React sesuaikan dengan keinginan Anda.</p>
+                <h3 style={{color:'var(--secondary-color)'}}>Welcome to Wizzy.dnd </h3>
+                <p style={{width: 'calc(90%)', fontWeight:'300'}}> <div style={{textAlign:"justify"}}>We are delighted to introduce Wizzy.dnd, a free and open-source no-code website builder designed for simplicity and efficiency. With an intuitive drag-and-drop interface, users can seamlessly create static web pages without coding. Export clean HTML & CSS effortlessly and build websites with ease. Empowering creativity through simplicity.</div> </p>
             </div>
             <img style={{width: 'calc(40%)'}} src="/Icons/hero-image.png"></img>
         </div>
