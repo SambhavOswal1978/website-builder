@@ -50,9 +50,7 @@ const AboutUs = () => {
       <section>
         <h2>Feedback</h2>
         <p>
-          We value your feedback! Feel free to reach out to us via email:
-        </p>
-        <p>
+          We value your feedback! Feel free to reach out to us via email:       
           <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a>
         </p>
       </section>
