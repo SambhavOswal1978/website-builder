@@ -1,0 +1,6 @@
+<div class="navbar">
+        <div class="navItems">
+        <span class="navbar-Restro-Title">Logo and Title</span>
+        <span class="navbar-About-Us">About Us</span>
+    </div>
+    </div>
