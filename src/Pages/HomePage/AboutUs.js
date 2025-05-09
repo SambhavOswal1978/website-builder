@@ -54,6 +54,14 @@ const AboutUs = () => {
           <a href="mailto:g49capstone@gmail.com">Our E-Mail Address</a>
         </p>
       </section>
+      <section style={{ marginBottom: "20px" }}>
+        <h2>Group Photo</h2>
+        <img 
+          src="../assests/GroupPhoto.jpg" 
+          alt="Group Photo" 
+          style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }} 
+        />
+      </section>
     </div>
   );
 };
