@@ -57,7 +57,7 @@ const AboutUs = () => {
       <section style={{ marginBottom: "20px" }}>
         <h2>Group Photo</h2>
         <img 
-          src="/Icons/GroupPhoto.jpg" 
+          src="./Icons/GroupPhoto.jpg" 
           alt="Group Photo" 
           style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }} 
         />
