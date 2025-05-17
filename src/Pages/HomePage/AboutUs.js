@@ -12,7 +12,7 @@ const AboutUs = () => {
           This project is a <strong>No-Code Website Builder</strong>, designed to
           empower users to create websites effortlessly without any coding
           knowledge. It provides drag-and-drop functionality, customizable
-          templates, and advanced features like media management and SEO tools.
+          templates, and advanced feature like media management.
         </p>
         <p>
           <strong>Purpose:</strong> To simplify the website creation process for
