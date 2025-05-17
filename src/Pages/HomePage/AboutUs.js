@@ -59,7 +59,7 @@ const AboutUs = () => {
         <img 
           src="./Icons/GroupPhoto.jpg" 
           alt="Group Photo" 
-          style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }} 
+          style={{ maxWidth: "80%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }} 
         />
       </section>
     </div>
